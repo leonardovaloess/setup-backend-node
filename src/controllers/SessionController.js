@@ -1,15 +1,14 @@
-import { prisma } from "../../config/prisma.js";
+import { prisma } from "../config/prisma.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-class SessionController {
 
+class SessionController {
   /*
   
   => Fazer a validação dos dados com Yup
   => Fazer o CRUD Cliente e Contrato
   
   */
-
 
   async signUp(req, res) {
     const { user_name, user_email, user_password } = req.body;
